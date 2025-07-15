@@ -8,18 +8,18 @@ import {
 } from "@/components/ui/carousel"
 
 export function CarouselSpacing() {
-    // Import your images - adjust the filenames to match your actual images
+    // Updated paths to reference public folder - adjust filenames to match your actual images
     const images = [
-        "src/images/image-1.jpg",
-        "/src/images/image-2.jpg",
-        "/src/images/image-3.jpg",
-        "/src/images/image-4.jpg",
-        "/src/images/image-5.jpg",
-        "/src/images/image-6.jpg",
-        "/src/images/image-7.jpg",
-        "/src/images/image-8.jpg",
-        "/src/images/image-9.jpg",
-        "/src/images/image-10.jpg",
+        "/image-1.jpg",
+        "/image-2.jpg",
+        "/image-3.jpg",
+        "/image-4.jpg",
+        "/image-5.jpg",
+        "/image-6.jpg",
+        "/image-7.jpg",
+        "/image-8.jpg",
+        "/image-9.jpg",
+        "/image-10.jpg",
     ]
 
     return (
@@ -35,6 +35,10 @@ export function CarouselSpacing() {
                                             src={image}
                                             alt={`Image ${index + 1}`}
                                             className="w-full h-full object-cover"
+                                            onError={(e) => {
+                                                console.log(`Failed to load image: ${image}`);
+                                                e.currentTarget.style.display = 'none';
+                                            }}
                                         />
                                     </div>
                                 </CardContent>
