@@ -1,6 +1,6 @@
 import {CarouselSpacing} from "@/components/CarouselSpacing.tsx";
 import { Link } from 'react-router-dom';
-import MyIcon from "@/images/heart-lock-svgrepo-com.svg"
+// Remove this import - we'll use public folder
 import {
     AlertDialog,
     AlertDialogCancel,
@@ -21,7 +21,7 @@ function Her() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-10 text-center pt-6 pb-4 items-center justify-center max-w-6xl mx-auto">
                         <Link to="/" className="flex justify-center">
-                            <img alt="heart" src={MyIcon} className="h-10 w-10 sm:h-12 sm:w-12 cursor-pointer hover:scale-110 transition-transform drop-shadow-lg" />
+                            <img alt="heart" src="/heart-lock-svgrepo-com.svg" className="h-10 w-10 sm:h-12 sm:w-12 cursor-pointer hover:scale-110 transition-transform drop-shadow-lg" />
                         </Link>
                         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#AF3E3E] col-span-9 drop-shadow-md">Welcome to my girlfriend core</h1>
                     </div>
